@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo project</title>
+</head>
+<body>
+    <h1>My Demo Project</h1>
+    {% include 'navbar.html' %}
+    {% block content %}
+     <h2>Replase Me</h2>
+    {% endblock %}
+
+    {% block two %}
+     <h2>Replase Me Block 2</h2>
+    {% endblock %}
+</body>
+</html>

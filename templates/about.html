@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{title|title}}</h1>
+{{ html_output|safe }}
+<p>
+    {{ my_text }}, {{ my_number }}
+</p>
+<ul>
+    {% for item in my_item_list %}
+        {% if item == 222 %}
+            <li>{{forloop.counter}} - {{ item|add:22 }}</li>
+        {% elif item == "Abc" %}
+            <li>Just a string</li>
+        {% else %}
+            <li>{{forloop.counter}} - {{ item }}</li>
+        {% endif %}
+        
+    
+    {% endfor %}
+</ul>
+{% endblock %}
+
