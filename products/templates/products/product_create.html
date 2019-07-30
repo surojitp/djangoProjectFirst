@@ -1,8 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>Product Form</h1>
-<form method="POST"> {% csrf_token %}
+<!-- <form method="POST"> {% csrf_token %}
     {{form.as_p}}
+    <input type="submit" value="Save" />
+</form> -->
+<!-- <form method="POST" action=".">{% csrf_token %}
+    <input type="text" name="title" placeholder="Enter Title">
+    <input type="submit" value="Save" />
+</form> -->
+<form method="POST" action=".">{% csrf_token %}
+    {{ form.as_p }}
     <input type="submit" value="Save" />
 </form>
 {% endblock %}
